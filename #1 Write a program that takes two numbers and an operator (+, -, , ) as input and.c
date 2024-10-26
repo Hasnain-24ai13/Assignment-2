@@ -1,41 +1,40 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 int main() {
-    float firstNumber, secondNumber, answer;
+    int firstNumber, secondNumber, answer;
     char operation;
 
-    cout << "Enter the first number: ";
-    cin >> firstNumber;
+    printf("Enter the first number: ");
+    scanf("%d", &firstNumber);
 
-    cout << "Enter the second number: ";
-    cin >> secondNumber;
+    printf("Enter the second number: ");
+    scanf("%d", &secondNumber);
 
-    cout << "Enter an operator (+, -, *, /): ";
-    cin >> operation;
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operation);
 
     if (operation == '+') {
         answer = firstNumber + secondNumber;
-        cout << "The result of " << firstNumber << " + " << secondNumber << " is: " << answer << endl;
+        printf("The result of %d + %d is: %d\n", firstNumber, secondNumber, answer);
     } 
     else if (operation == '-') {
         answer = firstNumber - secondNumber;
-        cout << "The result of " << firstNumber << " - " << secondNumber << " is: " << answer << endl;
+        printf("The result of %d - %d is: %d\n", firstNumber, secondNumber, answer);
     } 
     else if (operation == '*') {
         answer = firstNumber * secondNumber;
-        cout << "The result of " << firstNumber << " * " << secondNumber << " is: " << answer << endl;
+        printf("The result of %d * %d is: %d\n", firstNumber, secondNumber, answer);
     } 
     else if (operation == '/') {
         if (secondNumber != 0) {
             answer = firstNumber / secondNumber;
-            cout << "The result of " << firstNumber << " / " << secondNumber << " is: " << answer << endl;
+            printf("The result of %d / %d is: %d\n", firstNumber, secondNumber, answer);
         } else {
-            cout << "Error: You cannot divide by zero." << endl;
+            printf("Error: You cannot divide by zero.\n");
         }
     } 
     else {
-        cout << "Error: Invalid operator entered." << endl;
+        printf("Error: Invalid operator entered.\n");
     }
 
     return 0;
